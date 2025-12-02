@@ -1,0 +1,32 @@
+2025-11-22 20:07:44 - INFO - main.py:156 - ******************start testing****************************
+2025-11-22 20:07:44 - INFO - main.py:157 - Dataset length: test_dataset, 1490937
+2025-11-22 20:07:44 - INFO - main.py:158 - model information: CNN_BASELINE(
+  (layer1): Sequential(
+    (0): Conv2d(1, 64, kernel_size=(5, 3), stride=(3, 1), padding=(12, 1), dilation=(2, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.01, inplace=True)
+    (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=False)
+  )
+  (layer2): Sequential(
+    (0): Conv2d(64, 128, kernel_size=(5, 3), stride=(3, 1), padding=(12, 1), dilation=(2, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.01, inplace=True)
+    (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=False)
+  )
+  (layer3): Sequential(
+    (0): Conv2d(128, 256, kernel_size=(5, 3), stride=(3, 1), padding=(12, 1), dilation=(2, 1))
+    (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.01, inplace=True)
+    (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=False)
+  )
+  (fc1): Sequential(
+    (0): Dropout(p=0.5, inplace=False)
+    (1): Linear(in_features=46080, out_features=2, bias=True)
+  )
+  (softmax): Softmax(dim=1)
+)
+2025-11-22 20:07:44 - INFO - main.py:159 - epoch: 44
+2025-11-22 20:16:31 - INFO - main.py:174 - confusion_matrix: [[265196. 451731.]
+ [259294. 514716.]]
+2025-11-22 20:16:31 - INFO - main.py:175 - analyze confusion_matrix result: {'TP': np.float64(514716.0), 'TN': np.float64(265196.0), 'FP': np.float64(451731.0), 'FN': np.float64(259294.0), 'Accuracy': np.float64(0.5231019151043941), 'Precision': np.float64(0.5325858531300733), 'Recall': np.float64(0.6649991602175682), 'F1': np.float64(0.5914722397623152), 'Confusion_matrix_ratio': array([[0.17787204, 0.30298463],
+       [0.17391345, 0.34522988]])}

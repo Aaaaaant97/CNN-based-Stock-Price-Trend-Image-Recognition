@@ -1,0 +1,56 @@
+2025-11-24 15:02:32 - INFO - main.py:82 - ******************start training****************************
+2025-11-24 15:02:32 - INFO - main.py:83 - Dataset length: train_dataset, 485125, len(val_dataset), 207912
+2025-11-24 15:02:32 - INFO - main.py:84 - model information: CNN_BASELINE(
+  (layer1): Sequential(
+    (0): Conv2d(1, 64, kernel_size=(5, 3), stride=(3, 1), padding=(12, 1), dilation=(2, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.01, inplace=True)
+    (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=False)
+  )
+  (layer2): Sequential(
+    (0): Conv2d(64, 128, kernel_size=(5, 3), stride=(3, 1), padding=(12, 1), dilation=(2, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.01, inplace=True)
+    (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=False)
+  )
+  (layer3): Sequential(
+    (0): Conv2d(128, 256, kernel_size=(5, 3), stride=(3, 1), padding=(12, 1), dilation=(2, 1))
+    (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.01, inplace=True)
+    (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=False)
+  )
+  (fc1): Sequential(
+    (0): Dropout(p=0.5, inplace=False)
+    (1): Linear(in_features=46080, out_features=2, bias=True)
+  )
+  (softmax): Softmax(dim=1)
+)
+2025-11-24 15:02:32 - INFO - main.py:85 - optimizer information: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    decoupled_weight_decay: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 1e-05
+    maximize: False
+    weight_decay: 0
+)
+2025-11-24 15:02:32 - INFO - main.py:86 - parameters: train_batch_size = 128, eval_batch_size = 256, start_epoch = 0, end_epoch = 100
+2025-11-24 15:02:32 - INFO - main.py:87 - early stopping: use_early_stopping = True, epoch_early_stopping = 0, patience_early_stopping = 2
+2025-11-24 15:07:05 - INFO - main.py:127 - Epoch = [1/100], train avg Loss = 0.732101, eval avg Loss = 0.698258, epoch Time = 272.88s
+2025-11-24 15:11:38 - INFO - main.py:127 - Epoch = [2/100], train avg Loss = 0.713433, eval avg Loss = 0.690377, epoch Time = 273.49s
+2025-11-24 15:16:13 - INFO - main.py:127 - Epoch = [3/100], train avg Loss = 0.703335, eval avg Loss = 0.686012, epoch Time = 274.82s
+2025-11-24 15:20:48 - INFO - main.py:127 - Epoch = [4/100], train avg Loss = 0.696919, eval avg Loss = 0.685911, epoch Time = 274.56s
+2025-11-24 15:25:23 - INFO - main.py:127 - Epoch = [5/100], train avg Loss = 0.692149, eval avg Loss = 0.681590, epoch Time = 275.56s
+2025-11-24 15:29:57 - INFO - main.py:127 - Epoch = [6/100], train avg Loss = 0.688584, eval avg Loss = 0.680880, epoch Time = 274.29s
+2025-11-24 15:34:34 - INFO - main.py:127 - Epoch = [7/100], train avg Loss = 0.685167, eval avg Loss = 0.687875, epoch Time = 276.95s
+2025-11-24 15:39:15 - INFO - main.py:127 - Epoch = [8/100], train avg Loss = 0.682720, eval avg Loss = 0.678515, epoch Time = 280.98s
+2025-11-24 15:43:49 - INFO - main.py:127 - Epoch = [9/100], train avg Loss = 0.680037, eval avg Loss = 0.681243, epoch Time = 273.30s
+2025-11-24 15:48:22 - INFO - main.py:127 - Epoch = [10/100], train avg Loss = 0.678036, eval avg Loss = 0.677763, epoch Time = 273.13s
+2025-11-24 15:52:55 - INFO - main.py:127 - Epoch = [11/100], train avg Loss = 0.676370, eval avg Loss = 0.678165, epoch Time = 273.16s
+2025-11-24 15:57:29 - INFO - main.py:127 - Epoch = [12/100], train avg Loss = 0.674691, eval avg Loss = 0.681514, epoch Time = 274.27s
+2025-11-24 15:57:29 - INFO - main.py:133 - Early stopping!, epoch = 12, eval_loss = 0.6815136938664013

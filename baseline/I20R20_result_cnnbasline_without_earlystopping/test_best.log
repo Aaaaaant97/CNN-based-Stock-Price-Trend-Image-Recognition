@@ -1,0 +1,31 @@
+2025-11-22 13:47:57 - INFO - main.py:156 - ******************start testing****************************
+2025-11-22 13:47:57 - INFO - main.py:157 - Dataset length: test_dataset, 1490937
+2025-11-22 13:47:57 - INFO - main.py:158 - model information: CNN_BASELINE(
+  (layer1): Sequential(
+    (0): Conv2d(1, 64, kernel_size=(5, 3), stride=(3, 1), padding=(12, 1), dilation=(2, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.01, inplace=True)
+    (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=False)
+  )
+  (layer2): Sequential(
+    (0): Conv2d(64, 128, kernel_size=(5, 3), stride=(3, 1), padding=(12, 1), dilation=(2, 1))
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.01, inplace=True)
+    (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=False)
+  )
+  (layer3): Sequential(
+    (0): Conv2d(128, 256, kernel_size=(5, 3), stride=(3, 1), padding=(12, 1), dilation=(2, 1))
+    (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.01, inplace=True)
+    (3): MaxPool2d(kernel_size=(2, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=False)
+  )
+  (fc1): Sequential(
+    (0): Dropout(p=0.5, inplace=False)
+    (1): Linear(in_features=46080, out_features=2, bias=True)
+  )
+  (softmax): Softmax(dim=1)
+)
+2025-11-22 13:51:01 - INFO - main.py:173 - confusion_matrix: [[324941. 391986.]
+ [315490. 458520.]]
+2025-11-22 13:51:01 - INFO - main.py:174 - analyze confusion_matrix result: {'TP': np.float64(458520.0), 'TN': np.float64(324941.0), 'FP': np.float64(391986.0), 'FN': np.float64(315490.0), 'Accuracy': np.float64(0.5254822973740675), 'Precision': np.float64(0.5391143625089064), 'Recall': np.float64(0.5923954470872469), 'F1': np.float64(0.5645004419777953), 'Confusion_matrix_ratio': array([[0.21794415, 0.26291252],
+       [0.21160519, 0.30753815]])}
